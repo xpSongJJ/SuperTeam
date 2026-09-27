@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "common_instructions": "agents/common.md",
+  "shared_skills": [
+    "skills/shared/contract-collaboration",
+    "skills/shared/delegating-work",
+    "skills/shared/engineering-evidence",
+    "skills/shared/independent-review"
+  ],
+  "roles": {
+    "planner": {
+      "instructions": "agents/planner.md",
+      "skills": [
+        "skills/planner/planning-delivery",
+        "skills/planner/solving-hard-problems",
+        "skills/planner/integrating-delivery"
+      ]
+    },
+    "frontend": {
+      "instructions": "agents/frontend.md",
+      "skills": [
+        "skills/frontend/frontend-delivery"
+      ]
+    },
+    "backend": {
+      "instructions": "agents/backend.md",
+      "skills": [
+        "skills/backend/backend-delivery"
+      ]
+    }
+  }
+}

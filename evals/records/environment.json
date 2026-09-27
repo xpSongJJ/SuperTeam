@@ -1,0 +1,31 @@
+{
+  "date": "2026-09-27",
+  "harness": "codex-cli 0.156.1",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "sandbox": "read-only",
+  "ephemeral": true,
+  "profile": "Existing local CLI configuration; no model override; globally discoverable skills were not removed.",
+  "method": "Text-only decisions. Five no-new-guidance sessions, five all-rules sessions, then five P1-only sessions after refinement. No real application execution or Multica interaction.",
+  "source_sha256": {
+    "agents/backend.md": "627ac0dd304ac65534f734d52146405bf7e1195250a92f27d367071e07a82869",
+    "agents/common.md": "20f69aa41a777874d0f13815b05e8cae9da88458010f9016e6110af3f3605f4d",
+    "agents/frontend.md": "82afa5dca8e4dcf3dbad7e2d74c2f13bc1ce0185a771cb417c49ffbc9334fe42",
+    "agents/planner.md": "17859b1e5200e7942625e8ccfc274f077d906c65dc33f40a46f3b85a00e72682",
+    "skills/backend/backend-delivery/SKILL.md": "3a410b479bd6ea8ac714c481e91ad9a473082a979636eb130463cdba6b09a807",
+    "skills/frontend/frontend-delivery/SKILL.md": "30d30fb175160529450f6b8ae1ea0c9f806db75057243f9b02b39aae6062caab",
+    "skills/planner/integrating-delivery/SKILL.md": "fb7784d88857c63cf6f0ffe63811df690b03a4b7d515dfc58c89d7acb9cfb452",
+    "skills/planner/integrating-delivery/templates/integration.md": "f07b12709562275e1326621518ad791cad10c352f22fa45ab2cd601ca12eb8d4",
+    "skills/planner/planning-delivery/SKILL.md": "cc301e71984863ff33d902189a32bff119ff1d737b754178f424b6d0ebd9ba31",
+    "skills/planner/planning-delivery/templates/plan.md": "766055fb1e3d1a0fbabf85c11ae8bebb34fded9364deec8d204e4f39675373aa",
+    "skills/planner/solving-hard-problems/SKILL.md": "3c396e850c5191ad53a270c5b5161ac938a50979bd54d01b18beb6c166d9c837",
+    "skills/shared/contract-collaboration/SKILL.md": "e9c4cb2e5d706d628dd0454a67263f3bb150b62aa2bba9dcbd72435e5e8e9271",
+    "skills/shared/contract-collaboration/templates/contract.md": "cb694753be3184953de16af9f14eff0d34abf0964b1052e1f790acee2294d5b4",
+    "skills/shared/delegating-work/SKILL.md": "89e6c9986b50ecd43ab27e780bf3ca4c0dcb9644f3a25dd5bfdbf3f3b620b44d",
+    "skills/shared/delegating-work/templates/worker-brief.md": "da6c03d8c56a53ef3e8c592dc63b24b635c5379aa296cd21253e225a438132a6",
+    "skills/shared/engineering-evidence/SKILL.md": "9b0d82effb3d2cc22690dce367a49c54203027ae707a4607f64e6b1df7270e70",
+    "skills/shared/engineering-evidence/templates/evidence.md": "3e7f0ca93667c5b2be1cbee9c5a959d9da079d2f802790a5a6a6f3e81b1e91d1",
+    "skills/shared/independent-review/SKILL.md": "2df40d2529aad8b6daa55cecc7ade4890ed16bd05018abc3267841eb49a89060",
+    "skills/shared/independent-review/templates/review.md": "bdab65c1eae6d7098f046fa02b3141ac30efccb951da366761ad06592fde27ee"
+  }
+}

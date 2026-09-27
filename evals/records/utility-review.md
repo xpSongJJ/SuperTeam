@@ -1,0 +1,13 @@
+**Verdict: changes requested.** The utility can accept inputs that produce bundles with broken or source-dependent references. These findings are based on static review of the supplied code.
+
+- **Medium — `check`: absolute links can pass the portability check.** An inline Markdown link using an absolute path to a file inside the same skill directory passes both containment and existence checks. `build` preserves that absolute path, so the exported skill still depends on the original source location. Require relative local links or rewrite them during export.
+
+- **Medium — `check` / `LINK`: Markdown parsing misses broken references and rejects valid links.** A reference-style link such as `[Template][template]` followed by `[template]: missing.md` is never checked, so validation succeeds despite the missing file. Conversely, `[Record](references/record.md "Proof")` is valid Markdown but is treated as a filename containing the title and rejected. Links inside code examples can also be incorrectly validated. Use Markdown-aware parsing and test these forms.
+
+- **Medium — `check` / `build`: instruction-file references are not made self-contained.** Validation only checks that common and role instruction files exist. For example, `[Guide](../docs/guide.md)` can work in `agents/planner.md`, but after concatenation into `<out>/planner/instructions.md`, its target changes and the guide is not copied. Validate instruction dependencies and copy/rewrite them for the output layout.
+
+- **Medium — `build`: failures leave partial output that blocks retry.** Instruction files are decoded during the export loop. If `agents/backend.md` contains invalid UTF-8, `check` passes, earlier bundles are written, and export then fails. The remaining output causes the next invocation to fail its overwrite check. Validate all instruction text before writing, and use staging with cleanup to handle subsequent copy/write failures.
+
+The synthetic tests do not cover these cases. `test_validates_before_writing` exercises only a missing instruction file. Checksum verification also uses the same `team.digest` implementation as production, so it does not independently establish SHA-256 correctness.
+
+**Execution limits:** Reviewed only the pasted utility and tests. No tools were used, no files were changed, and no tests or reproductions were executed. Runtime and platform-specific behavior remain unverified.

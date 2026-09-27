@@ -1,0 +1,62 @@
+[
+  {
+    "sample": 1,
+    "response": "{\n  \"P1\": {\n    \"action\": \"Propose persisted-order success; ask the human whether checkout success requires persistence or permits queue acknowledgment. Keep the contract proposed. Hand Frontend Lead a bounded interaction/feasibility assessment and Backend Lead a durability/retry assessment; hold semantics-dependent implementation tickets. After the decision, issue revision-bound tickets with acceptance cases, dependencies, write scopes and checks.\",\n    \"owner\": \"Planner\",\n    \"status\": \"BLOCKED on human success semantics; independent assessments proceed.\",\n    \"evidence_needed\": \"Recorded human decision, accepted contract revision, both leads’ acknowledgments, and persistence/queue failure-and-retry acceptance cases.\"\n  }\n}",
+    "run": {
+      "phase": "guided",
+      "sample": 1,
+      "exit_code": 0,
+      "seconds": 50.15,
+      "response_present": true
+    },
+    "prompt_sha256": "f39932ed9b6910b0952104063db03e5409abdf9d3fb814f697cc0bb5248c39f6"
+  },
+  {
+    "sample": 2,
+    "response": "{\n  \"P1\": {\n    \"action\": \"Ask the human whether checkout success requires a persisted order or permits queued processing; recommend persisted success as proposed. Hand off bounded feasibility tasks: Frontend Lead assesses confirmation/retry flows; Backend Lead assesses durability/recovery guarantees. Hold dependent implementation tickets until the decision is recorded in an accepted contract.\",\n    \"owner\": \"Planner\",\n    \"status\": \"BLOCKED on human success semantics; independent feasibility work proceeds.\",\n    \"evidence_needed\": \"Human decision, both leads’ impact assessments, versioned contract, acceptance cases, and task records specifying dependencies, ownership, scope, and checks.\"\n  }\n}",
+    "run": {
+      "phase": "guided",
+      "sample": 2,
+      "exit_code": 0,
+      "seconds": 45.69,
+      "response_present": true
+    },
+    "prompt_sha256": "f39932ed9b6910b0952104063db03e5409abdf9d3fb814f697cc0bb5248c39f6"
+  },
+  {
+    "sample": 3,
+    "response": "{\n  \"P1\": {\n    \"action\": \"Recommend persisted success as proposed; ask the human whether success requires persistence or permits queuing. Hold dependent implementation tickets. Hand off FE-1 to Frontend Lead to assess confirmation/retry behavior and BE-1 to Backend Lead to assess durability/recovery feasibility; both are analysis-only. After the decision, record contract v1 and issue bounded implementation tickets.\",\n    \"owner\": \"Planner\",\n    \"status\": \"BLOCKED on success semantics; independent feasibility work may proceed.\",\n    \"evidence_needed\": \"Human decision, both leads’ assessments, accepted contract revision, observable acceptance cases, dependencies and write scopes.\"\n  }\n}",
+    "run": {
+      "phase": "guided",
+      "sample": 3,
+      "exit_code": 0,
+      "seconds": 43.04,
+      "response_present": true
+    },
+    "prompt_sha256": "f39932ed9b6910b0952104063db03e5409abdf9d3fb814f697cc0bb5248c39f6"
+  },
+  {
+    "sample": 4,
+    "response": "{\n  \"P1\": {\n    \"action\": \"Recommend persisted success as proposed; ask the human to choose persisted versus queued before accepting semantics. Hand off FE-01 to assess confirmation/pending/error flows and BE-01 to assess durability/retry guarantees. Both return feasibility and acceptance cases; defer dependent implementation tickets until the decision and contract are recorded.\",\n    \"owner\": \"Planner owns decision and contract; leads own assessments.\",\n    \"status\": \"Contract-dependent implementation BLOCKED on human decision; assessments READY.\",\n    \"evidence_needed\": \"Recorded human decision, versioned contract, producer/consumer acknowledgments, and bounded implementation tickets with acceptance cases.\"\n  }\n}",
+    "run": {
+      "phase": "guided",
+      "sample": 4,
+      "exit_code": 0,
+      "seconds": 66.62,
+      "response_present": true
+    },
+    "prompt_sha256": "f39932ed9b6910b0952104063db03e5409abdf9d3fb814f697cc0bb5248c39f6"
+  },
+  {
+    "sample": 5,
+    "response": "{\n  \"P1\": {\n    \"action\": \"Recommend persisted-order success as proposed; ask the human whether checkout success means persisted or merely queued. Hand off bounded feasibility tasks: Frontend Lead assesses confirmation/pending/error flows; Backend Lead assesses persistence, retries and recovery. Hold dependent implementation tickets until the decision; then record the accepted contract revision and issue scoped tickets.\",\n    \"owner\": \"Planner\",\n    \"status\": \"BLOCKED on human success semantics; independent feasibility work may proceed.\",\n    \"evidence_needed\": [\n      \"Recorded human decision\",\n      \"Producer/consumer impact assessments\",\n      \"Versioned contract and observable acceptance cases\"\n    ]\n  }\n}",
+    "run": {
+      "phase": "guided",
+      "sample": 5,
+      "exit_code": 0,
+      "seconds": 60.81,
+      "response_present": true
+    },
+    "prompt_sha256": "f39932ed9b6910b0952104063db03e5409abdf9d3fb814f697cc0bb5248c39f6"
+  }
+]
